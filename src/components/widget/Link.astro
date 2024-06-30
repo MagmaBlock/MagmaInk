@@ -1,0 +1,31 @@
+---
+import path from "node:path";
+import { Icon } from "astro-icon/components";
+import { getDir } from "../../utils/url-utils";
+import ImageWrapper from "../misc/ImageWrapper.astro";
+
+interface Props {
+	title: string;
+	link: string;
+	desc: string;
+	img?: string;
+}
+
+const { title, link, desc, img } = Astro.props;
+
+const hasCover = img !== undefined && img !== null && img !== "";
+---
+
+<div class="">
+  <div class="shadow-sm">
+    <img src={img} class="friend-link-avatar bg-gradient-secondary">
+    <div>
+      <div class="text-[var(--primary)]">
+        <a target="_blank" href={link}>{title}</a>
+      </div>
+      <div class="friend-link-description">{desc}</div>
+        <div class="friend-link-links"><a href={link} target="_blank"></a>
+      </div>
+    </div>
+  </div>
+</div>
