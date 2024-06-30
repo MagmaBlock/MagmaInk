@@ -1,17 +1,22 @@
 ---
 import GlobalStyles from "@components/GlobalStyles.astro";
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
 import ImageWrapper from "@components/misc/ImageWrapper.astro";
 
-import {pathsEqual} from "@utils/url-utils";
+import { pathsEqual } from "@utils/url-utils";
 import ConfigCarrier from "@components/ConfigCarrier.astro";
-import {profileConfig, siteConfig} from "@/config";
-import {Favicon} from "../types/config";
-import {defaultFavicons} from "../constants/icon";
-import {LIGHT_MODE, DARK_MODE, AUTO_MODE, DEFAULT_THEME} from "../constants/constants";
-import {url} from "../utils/url-utils";
+import { profileConfig, siteConfig } from "@/config";
+import { Favicon } from "../types/config";
+import { defaultFavicons } from "../constants/icon";
+import {
+	LIGHT_MODE,
+	DARK_MODE,
+	AUTO_MODE,
+	DEFAULT_THEME,
+} from "../constants/constants";
+import { url } from "../utils/url-utils";
 
 interface Props {
 	title: string;
@@ -21,25 +26,25 @@ interface Props {
 
 let { title, banner, description } = Astro.props;
 
-const isHomePage = pathsEqual(Astro.url.pathname, '/');
+const isHomePage = pathsEqual(Astro.url.pathname, "/");
 
 const testPathName = Astro.url.pathname;
 
 const anim = {
 	old: {
-		name: 'fadeIn',
-		duration: '4s',
-		easing: 'linear',
-		fillMode: 'forwards',
-		mixBlendMode: 'normal',
+		name: "fadeIn",
+		duration: "4s",
+		easing: "linear",
+		fillMode: "forwards",
+		mixBlendMode: "normal",
 	},
 	new: {
-		name: 'fadeOut',
-		duration: '4s',
-		easing: 'linear',
-		fillMode: 'backwards',
-		mixBlendMode: 'normal',
-	}
+		name: "fadeOut",
+		duration: "4s",
+		easing: "linear",
+		fillMode: "backwards",
+		mixBlendMode: "normal",
+	},
 };
 
 const myFade = {
@@ -50,7 +55,7 @@ const myFade = {
 // defines global css variables
 // why doing this in Layout instead of GlobalStyles: https://github.com/withastro/astro/issues/6728#issuecomment-1502203757
 const configHue = siteConfig.themeColor.hue;
-if (!banner || typeof banner !== 'string' || banner.trim() === '') {
+if (!banner || typeof banner !== "string" || banner.trim() === "") {
 	banner = siteConfig.banner.src;
 }
 
@@ -66,10 +71,10 @@ if (title) {
 	pageTitle = `${siteConfig.title} - ${siteConfig.subtitle}`;
 }
 
-const favicons: Favicon[] = siteConfig.favicon.length > 0 ? siteConfig.favicon : defaultFavicons
+const favicons: Favicon[] =
+	siteConfig.favicon.length > 0 ? siteConfig.favicon : defaultFavicons;
 
-const siteLang = siteConfig.lang.replace('_', '-')
-
+const siteLang = siteConfig.lang.replace("_", "-");
 ---
 
 <!DOCTYPE html>
