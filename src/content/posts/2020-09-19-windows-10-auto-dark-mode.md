@@ -8,7 +8,7 @@ tags:
   - "开源"
   - "电脑"
   - "软件"
-coverImage: "night-2845347_1280.jpg"
+image: "images/night-2845347_1280.jpg"
 ---
 
 Windows 10 早在 18 年 10 月的版本就已经支持了 Dark Mode，中文翻译即为深色模式。打开深色模式后，系统的大部分界面和支持的软件都将改变为深色配色。如果在夜间或者暗光环境下使用电脑，视觉疲劳会降得更低。
@@ -18,8 +18,6 @@ Windows 10 早在 18 年 10 月的版本就已经支持了 Dark Mode，中文翻
 ![](images/wIggl8.png)
 
 官方的产品不完美，那就要靠社区自己造轮子。在 Github 上，有一款名为 Windows Auto Night Mode 的开源程序，目前已经非常完善，支持多语言，拥有你可能需要的全部功能。
-
-\[github author="Armin2208" project="Windows-Auto-Night-Mode"\]
 
 ![](images/wIgNQO.png)
 

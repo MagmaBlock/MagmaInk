@@ -5,7 +5,7 @@ category: "分享"
 tags:
   - "uwp"
   - "小爱同学"
-coverImage: "1617209880-1617209834733.jpg"
+image: "images/1617209880-1617209834733.jpg"
 ---
 
 - ![](images/1617207495-apps.32575.13849109468963720.1326356c-bcc4-4cdf-87d8-eeed8946efb0.jpg)

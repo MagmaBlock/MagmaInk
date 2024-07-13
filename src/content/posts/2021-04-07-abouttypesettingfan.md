@@ -9,7 +9,7 @@ tags:
   - "网站"
   - "设计"
   - "追番"
-coverImage: "1618427055-halgatewood-com-tZc3vjPCk-Q-unsplash.jpg"
+image: "images/1618427055-halgatewood-com-tZc3vjPCk-Q-unsplash.jpg"
 ---
 
 我从 20 年疫情期间开始掉入二刺螈 ACG 的坑，时至今日已经看了 79 部番剧了。因为想要记录下来这些作品的观感体验，甚至以此为动力创建了博客。  

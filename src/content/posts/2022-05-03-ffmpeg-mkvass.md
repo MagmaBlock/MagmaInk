@@ -7,7 +7,7 @@ tags:
   - "字幕"
   - "技术"
   - "视频压制"
-coverImage: "1651595761-1651595755630.png"
+image: "images/1651595761-1651595755630.png"
 ---
 
 FFmpeg 是一个非常方便和强大的命令行视频媒体处理工具，可以对几乎任何常见的音视频文件进行转码压制。MKV 内封字幕，即使用 [Matroska](https://zh.wikipedia.org/zh-cn/Matroska) 封装格式将 ASS、SRT 等字幕封装进 .mkv 的单个文件。

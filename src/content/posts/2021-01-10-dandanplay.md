@@ -7,7 +7,7 @@ tags:
   - "弹弹play"
   - "番剧"
   - "白嫖"
-coverImage: "VCB-Studio-Hibike_-Euphonium-2-03Ma10p_1080px265_flac_2aac.mkv_20201226_222450.030.png"
+image: "images/VCB-Studio-Hibike_-Euphonium-2-03Ma10p_1080px265_flac_2aac.mkv_20201226_222450.030.png"
 ---
 
 ## 序言

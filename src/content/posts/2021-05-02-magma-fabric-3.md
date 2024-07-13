@@ -6,57 +6,43 @@ tags:
   - "fabric"
   - "minecraft"
   - "整合包"
-coverImage: "1619937775-0.jpg"
+image: "images/1619937775-0.jpg"
 ---
 
-即将过时
+# 即将过时
 
 由于个人精力有限，Magma Fabric 简单整合（1.16.5）、Magma 简单整合 3.0 （1.16.5） 将在 2022 年停止支持。  
 最新 **[Magma Fabric 1.18.1](https://www.yuque.com/magma/board/fabric1.18.1)** 已经发布，十分建议您使用新版本。
 
-## 更好的中文输入体验来了。
+## 更好的中文输入体验来了
 
-打字的时候再也不用一直潜行了，当然，这需要一些时间来适应?。
+打字的时候再也不用一直潜行了，当然，这需要一些时间来适应。
 
-更惊喜的是，全屏时也能看到中文输入法候选了，就像这样?。
+更惊喜的是，全屏时也能看到中文输入法候选了，就像这样。
 
-**兼容性提示：\[ref\]此模组所依赖的 API 库 satin 与 Optifine 的光影不兼容，如果你经常使用光影，那么只能关闭它了?。\[/ref\]\[ref\]兼容性不佳，若要禁用此模组，请禁用【Fabric Language Kotlin（前置）】、【Satin API（前置、与光影冲突）】以及【IngameIME（模组本体）】\[/ref\]**本模组已于 3.1 版本移除，但 3.2 版本计划添加输入法自动禁用功能。
+**兼容性提示：**  
+此模组所依赖的 API 库 Satin 与 Optifine 的光影不兼容，如果你经常使用光影，那么只能关闭它了。  
+兼容性不佳，若要禁用此模组，请禁用【Fabric Language Kotlin（前置）】、【Satin API（前置、与光影冲突）】以及【IngameIME（模组本体）】。本模组已于 3.1 版本移除，但 3.2 版本计划添加输入法自动禁用功能。
 
-## 优化箱子渲染还能保留动画。
+## 优化箱子渲染还能保留动画
 
 得益于 **[Enhanced Block Entities](https://www.curseforge.com/minecraft/mc-mods/enhanced-block-entities)** ，我们能享受方块模型带来的高帧率，还能看到会张嘴的箱子。
 
 <figure>
 
-- <figure>
-    
-    ![](images/1619935105-before.png)
-    
-    <figcaption>
-    
-    原版
-    
-    </figcaption>
-    
-    </figure>
+- ![](images/1619935105-before.png)
 
-- <figure>
-    
-    ![](images/1619935110-after.png)
-    
-    <figcaption>
-    
-    优化后
-    
-    </figcaption>
-    
-    </figure>
+  <figcaption>原版</figcaption>
+
+- ![](images/1619935110-after.png)
+
+  <figcaption>优化后</figcaption>
 
 - ![](images/1619934861-chest.png)
 
 </figure>
 
-## 长了手的 F1 视角。
+## 长了手的 F1 视角
 
 喜欢吗？不喜欢就再按一次。
 
@@ -68,13 +54,13 @@ coverImage: "1619937775-0.jpg"
 
 我也不记得了，但是 REI 记得。REI 又回来了。
 
-## 更加稳定的 3.0，离 ERROR 更远一点。
+## 更加稳定的 3.0，离 ERROR 更远一点
 
 测试启动并进行数分钟游戏，模组们都在好好的工作。没有潜在的报错 ERROR，可能我们离稳定 1.16 又近了一步。
 
 ![](images/1619935751-noerror.png)
 
-## 体验最新版的稳定与畅快。
+## 体验最新版的稳定与畅快
 
 下面是本次升级到**最新版本**的模组/组件列表，许多恼人的故障都在此得到解决了。
 
@@ -82,13 +68,13 @@ coverImage: "1619937775-0.jpg"
 
 ## 主要更新内容
 
-- 优化中文输入法使用体验，无文本框时自动禁用输入法。（https://www.mcbbs.net/forum.php?mod=viewthread&tid=1158421）
-- 现在在全屏时会使用内置输入法 UI 了。（仅支持微软拼音输入法）（https://www.mcbbs.net/forum.php?mod=viewthread&tid=1158421）
-- 优化箱子模型，保留动画的同时减缓大量箱子造成的渲染卡顿。（https://www.bilibili.com/video/av375045000）
-- 现在 F1 有了两种模式：隐藏 GUI 但不隐藏手中物品、隐藏手中物品（原版）。（https://www.curseforge.com/minecraft/mc-mods/better-f1）
+- 优化中文输入法使用体验，无文本框时自动禁用输入法。[详情](https://www.mcbbs.net/forum.php?mod=viewthread&tid=1158421)
+- 现在在全屏时会使用内置输入法 UI 了。（仅支持微软拼音输入法）[详情](https://www.mcbbs.net/forum.php?mod=viewthread&tid=1158421)
+- 优化箱子模型，保留动画的同时减缓大量箱子造成的渲染卡顿。[详情](https://www.bilibili.com/video/av375045000)
+- 现在 F1 有了两种模式：隐藏 GUI 但不隐藏手中物品、隐藏手中物品（原版）。[详情](https://www.curseforge.com/minecraft/mc-mods/better-f1)
 - 更新并重新启用 REI RoughlyEnoughItems 模组。
-- 现在按 G 键可以刷新你周围的方块，这可以有效的避免网络延迟造成的幽灵方块。（https://www.curseforge.com/minecraft/mc-mods/antighost）
-- 优化原版手持物品模型，填补其缝隙（https://www.curseforge.com/minecraft/mc-mods/item-model-fix）
+- 现在按 G 键可以刷新你周围的方块，这可以有效的避免网络延迟造成的幽灵方块。[详情](https://www.curseforge.com/minecraft/mc-mods/antighost)
+- 优化原版手持物品模型，填补其缝隙。[详情](https://www.curseforge.com/minecraft/mc-mods/item-model-fix)
 - 更新客户端跨版本 ViaFabric，修复之前不能使用的 BUG。注意，开启客户端跨版本可能导致无法兼容 Zth Plus 等多版本服务器。
 - 更新 Fabric 底层至最新。
 - 修复同一玩家发送多行消息时每行都会显示头像的问题。
@@ -122,6 +108,6 @@ Minecraft 是瑞典公司 Mojang Studios 的游戏产品，版权归其所有。
 - \[前置 API 库\] fabric-language-kotlin-1.5.0+kotlin.1.4.31.jar
 - \[前置 API 库\] satin-1.6.0-nightly.20w48a.jar
 
-## 多余的部分，还是移除好了。
+## 多余的部分，还是移除好了
 
-删除了 自动汉化 i18nupdatemod、自动配置“ autoconfig1u、cotton-client-commands、锂 lithium-fabric（与 Optifine 不兼容）。
+删除了 自动汉化 i18nupdatemod、自动配置 autoconfig1u、cotton-client-commands、锂 lithium-fabric（与 Optifine 不兼容）。

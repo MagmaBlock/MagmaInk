@@ -2,7 +2,7 @@
 title: "Magma Fabric 简单整合"
 published: 2021-02-03
 category: "分享"
-coverImage: "snow1.gif"
+image: "images/snow1.gif"
 tags: []
 ---
 
@@ -18,7 +18,7 @@ tags: []
 
 ## 下载地址
 
-\[alert\]**下载后请进行一次更新（为了省去多次打包上传的繁琐）**\[/alert\]
+**下载后请进行一次更新（为了省去多次打包上传的繁琐）**
 
 [满速下载](https://www.yuque.com/magma/board/oldmc#kYG6R)
 

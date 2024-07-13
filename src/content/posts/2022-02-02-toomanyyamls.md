@@ -1,5 +1,5 @@
 ---
-title: "好多 YAML - MC 服务器插件数据转换"
+title: "Essentials Warp 导出小记"
 published: 2022-02-02
 category: "分享"
 tags:
@@ -8,7 +8,7 @@ tags:
   - "教程"
   - "服务器"
   - "群组服"
-coverImage: "1643813119-ferenc-almasi-HfFoo4d061A-unsplash-2.jpg"
+image: "images/1643813119-ferenc-almasi-HfFoo4d061A-unsplash-2.jpg"
 ---
 
 当我们的 Minecraft 服务器越开越大的时候，就极有可能面临从单服务器升级到群组服的挑战，而升级时总会遇到一两个插件数据无法转换为 MySQL 的情况。像是 Essentials 的 Warp，存的全是 .yml 文件，文件名还不支持中文。而通常支持多服务器的插件数据都会使用 MySQL 来存储，怎么把一大堆 YAML 转过去呢？刚好最近误打误撞学到了 JavaScript 和 NodeJS 的一些基础，写个脚本来帮忙转换一下数据吧。
