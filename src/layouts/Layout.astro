@@ -406,7 +406,9 @@ const siteLang = siteConfig.lang.replace("_", "-");
   window.addEventListener("click", setBlank);
 
   function setBlank() {
-    const allAnchors = document.querySelectorAll(".markdown-content a");
+    const allAnchors = document.querySelectorAll(
+      ".markdown-content a, .custom-md a",
+    );
     const otherSiteAnchors = Array.from(allAnchors).filter((element) => {
       if (element instanceof HTMLAnchorElement) {
         return new URL(element.href).origin !== window.location.origin;
