@@ -49,20 +49,16 @@ CREATE TABLE IF NOT EXISTS `%cooldowns_table%`
   COLLATE utf8_unicode_ci;
 ```
 
-这张要创建的表带有一个外键约束，他是 `` FOREIGN KEY (`player_uuid`) ``，关联了玩家表的 `uuid`。它将 `player_uuid` 列与 `huskhomes_users` 表中的 `uuid` 列关联起来。这意味着 `player_uuid` 列的值必须在 `huskhomes_users` 表中存在，并且如果 `huskhomes_users` 表中的相应记录被删除或更新，这些变更也会在 `huskhomes_user_cooldowns` 表中进行级联操作。
+这张要创建的表带有一个外键约束，他是 ``FOREIGN KEY (`player_uuid`)``，关联了玩家表的 `uuid`。它将 `player_uuid` 列与 `huskhomes_users` 表中的 `uuid` 列关联起来。这意味着 `player_uuid` 列的值必须在 `huskhomes_users` 表中存在，并且如果 `huskhomes_users` 表中的相应记录被删除或更新，这些变更也会在 `huskhomes_user_cooldowns` 表中进行级联操作。
 
 询问 ChatGPT，外键创建不成功，一般有以下几种情况：
 
 > 这个错误可能有几个可能的原因：
 >
 > 1. **数据类型不匹配**：外键列和引用列的数据类型必须匹配。确保 `player_uuid` 列的数据类型与 `huskhomes_users` 表中的 `uuid` 列的数据类型完全一致。
->
 > 2. **被引用表不存在**：如果 `huskhomes_users` 表不存在，那么外键无法引用它。确保 `huskhomes_users` 表存在并具有相应的 `uuid` 列。
->
 > 3. **引用列不是主键**：外键通常引用的是其他表的主键列。如果 `huskhomes_users` 表中的 `uuid` 列不是主键，你需要确保它有一个唯一索引。
->
 > 4. **字符集和排序规则不匹配**：外键相关的表的字符集和排序规则需要匹配。如果字符集或排序规则不匹配，外键可能创建失败。
->
 > 5. **引擎不支持外键**：某些存储引擎可能不支持外键约束，你需要确保使用的存储引擎支持外键。
 >
 > 请检查上述因素，尤其是确保数据类型、表的存在与结构，以及字符集和排序规则的匹配。如果问题仍然存在，请提供更多细节，我将尽力帮助你解决这个问题。

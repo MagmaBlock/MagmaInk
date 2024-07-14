@@ -9,8 +9,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "new-post": "node scripts/new-post.js",
-    "format": "biome format --write ./src",
-    "lint": "biome check --write ./src"
+    "format": "prettier --write ./src"
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",

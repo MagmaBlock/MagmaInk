@@ -3,10 +3,10 @@ import { Icon } from "@iconify/vue";
 import { computed, ref } from "vue";
 
 const props = defineProps<{
-	title: string;
-	link: string;
-	desc: string;
-	img?: string;
+  title: string;
+  link: string;
+  desc: string;
+  img?: string;
 }>();
 
 const isImageError = ref(false);
