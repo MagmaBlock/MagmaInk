@@ -40,9 +40,9 @@ image: "images/1621518557-宇宙兄弟-第1话-弟弟日日人与哥哥六太-@0
 
 ![](images/1621518557-宇宙兄弟-第1话-弟弟日日人与哥哥六太-@05-44.17-1621518510182.png)
 
-<script type="text/javascript" src="https://player.dogecloud.com/js/loader"></script>
-
-<script type="text/javascript">var player = new DogePlayer({ container: document.getElementById('player'), userId: 2164, vcode: '8ed0b5493dabcfc9', autoPlay: false });</script>
+<video controls>
+  <source src="/videos/宇宙兄弟片段.mp4" type="video/mp4" />
+</video>
 
 ↑ 男主在宇航员相片长廊中的思索片段。
 

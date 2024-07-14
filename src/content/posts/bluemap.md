@@ -49,16 +49,9 @@ BlueMap，一款来自开源社区的新 Minecraft 网页地图生成器。相�
 
 <figure>
 
-<div id="player_b5618f69dd7fb5df"></div>
-<script type="text/javascript" src="https://player.dogecloud.com/js/loader"></script>
-<script type="text/javascript">
-var player = new DogePlayer({
-    container: document.getElementById('player_b5618f69dd7fb5df'),
-    userId: 2164,
-    vcode: 'b5618f69dd7fb5df',
-    autoPlay: false
-});
-</script>
+<video controls muted>
+  <source src="/videos/dynmap-演示.mp4" type="video/mp4" />
+</video>
 
 <figcaption>
 

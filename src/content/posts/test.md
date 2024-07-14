@@ -5,9 +5,9 @@ category: "hide"
 tags: []
 ---
 
-<script type="text/javascript" src="https://player.dogecloud.com/js/loader"></script>
-
-<script type="text/javascript">var player = new DogePlayer({ container: document.getElementById('player'), userId: 2164, vcode: 'fff8de59b6eed760', autoPlay: true });</script>
+<video controls>
+  <source src="https://permalink.dogevideo.com/player/get.mp4?vcode=fff8de59b6eed760&userId=2164&flsign=da93d5f5bdb5d6d38ecd82a7ec6f6c17&ext=.mp4" type="video/mp4" />
+</video>
 
 ---
 
