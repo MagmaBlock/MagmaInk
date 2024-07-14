@@ -3,24 +3,16 @@ title: "收款码"
 published: 2020-12-04
 ---
 
-如已通过以下 App 打开此界面，长按即可扫码。
+本界面用于快速向我小额支付，仅可通过链接访问。
 
-![](images/1607090423-1.jpg)
+如您已使用微信 / 支付宝 / QQ 打开本界面，请长按响应的二维码前往支付界面。
 
-![](images/mm_facetoface_collect_qrcode_1607090457728-1.png)
-
-![](images/qrcode_20201204220329-1.png)
-
-![](images/air.png)
-
-<figure>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 items-center`` ">
+  <img src="/paycode/1720892858451.jpg" alt="Alipay" />
+  <img src="/paycode/mm_facetoface_collect_qrcode_1720892846528.png" alt="WeChat Pay" />
+  <img src="/paycode/qrcode_20240714014751.png" alt="QQPay"/>
+</div>
 
 ![](images/mitchell-luo-07LMq80klHU-unsplash.jpg)
 
-<figcaption>
-
-Money，Money，Money！
-
-</figcaption>
-
-</figure>
+_Money, Money, Money!_
