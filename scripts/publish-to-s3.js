@@ -7,6 +7,7 @@ import { Upload } from "@aws-sdk/lib-storage";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import mime from "mime";
 
 // 获取当前脚本文件的目录
 const __filename = fileURLToPath(import.meta.url);
@@ -68,11 +69,13 @@ const uploadFolderToS3 = async (folderPath, bucketName, basePath = "dist") => {
     if (fileStat.isFile()) {
       const fileStream = fs.createReadStream(filePath);
       const key = path.join(basePath, file).replace(/\\/g, "/"); // 文件在 S3 中的键（路径）
+      const contentType = mime.getType(filePath) || "application/octet-stream";
 
       const uploadParams = {
         Bucket: bucketName,
         Key: key,
         Body: fileStream,
+        ContentType: contentType, // 设置 Content-Type
       };
 
       try {
