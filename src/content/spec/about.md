@@ -34,6 +34,7 @@
 
 - [Fuwari 主题](https://github.com/saicaca/fuwari)
 - [当前站点头图 - 来自 Unsplash | 作者 Hyory Liu](https://unsplash.com/photos/brown-wooden-gazebo-near-body-of-water-during-night-time-n4018exJ9kw)
+- [站点图标](https://tikolu.net/emojimix/%E2%AD%90+%F0%9F%94%A5)
 
 ## 源代码
 
