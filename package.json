@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "new-post": "node scripts/new-post.js",
-    "publish": "pnpm build && pnpm upload",
+    "publish-site": "pnpm build && pnpm upload",
     "upload": "node scripts/publish-to-s3.js",
     "format": "prettier --write ./src"
   },
