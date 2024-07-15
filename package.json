@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "new-post": "node scripts/new-post.js",
-    "publish": "node scripts/publish-to-s3.js",
+    "publish": "pnpm build && pnpm upload",
+    "upload": "node scripts/publish-to-s3.js",
     "format": "prettier --write ./src"
   },
   "dependencies": {
@@ -63,6 +64,7 @@
     "@types/markdown-it": "^14.1.1",
     "@types/mdast": "^4.0.4",
     "@types/sanitize-html": "^2.11.0",
+    "dotenv": "^16.4.5",
     "mime": "^4.0.4",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.0",

@@ -8,6 +8,10 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import mime from "mime";
+import dotenv from "dotenv";
+
+// 加载 .env 文件中的环境变量
+dotenv.config();
 
 // 获取当前脚本文件的目录
 const __filename = fileURLToPath(import.meta.url);
