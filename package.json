@@ -9,6 +9,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "new-post": "node scripts/new-post.js",
+    "publish": "node scripts/publish-to-s3.js",
     "format": "prettier --write ./src"
   },
   "dependencies": {
@@ -48,6 +49,8 @@
   },
   "devDependencies": {
     "@astrojs/ts-plugin": "^1.8.0",
+    "@aws-sdk/client-s3": "^3.614.0",
+    "@aws-sdk/lib-storage": "^3.614.0",
     "@biomejs/biome": "1.8.2",
     "@iconify-json/fa6-brands": "^1.1.19",
     "@iconify-json/fa6-regular": "^1.1.19",
