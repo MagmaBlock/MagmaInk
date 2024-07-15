@@ -1,14 +1,11 @@
-import {
-  S3Client,
-  ListObjectsV2Command,
-  DeleteObjectsCommand,
-} from "@aws-sdk/client-s3";
+import { S3Client, HeadObjectCommand } from "@aws-sdk/client-s3";
 import { Upload } from "@aws-sdk/lib-storage";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import mime from "mime";
 import dotenv from "dotenv";
+import crypto from "crypto";
 
 // 加载 .env 文件中的环境变量
 dotenv.config();
@@ -31,34 +28,35 @@ const s3Client = new S3Client({
 const folderPath = path.join(__dirname, "../dist"); // 指定 /dist 文件夹
 const bucketName = process.env.S3_BUCKET_NAME; // 从环境变量获取 S3 桶名称
 
-// 删除 S3 桶中的 /dist/ 目录
-const clearS3DistFolder = async (bucketName) => {
-  const listParams = {
-    Bucket: bucketName,
-    Prefix: "dist/", // 仅列出 /dist/ 目录中的对象
-  };
+// 计算文件的 MD5 哈希值
+const calculateMD5 = (filePath) => {
+  return new Promise((resolve, reject) => {
+    const hash = crypto.createHash("md5");
+    const stream = fs.createReadStream(filePath);
+    stream.on("data", (data) => hash.update(data));
+    stream.on("end", () => resolve(hash.digest("hex")));
+    stream.on("error", reject);
+  });
+};
 
+// 检查文件是否存在于 S3 且内容一致
+const isFileInS3 = async (bucketName, key, localFilePath) => {
   try {
-    const listedObjects = await s3Client.send(
-      new ListObjectsV2Command(listParams),
-    );
-
-    if (listedObjects.Contents.length === 0) return;
-
-    const deleteParams = {
+    const headParams = {
       Bucket: bucketName,
-      Delete: { Objects: [] },
+      Key: key,
     };
 
-    listedObjects.Contents.forEach(({ Key }) => {
-      deleteParams.Delete.Objects.push({ Key });
-    });
+    const headData = await s3Client.send(new HeadObjectCommand(headParams));
+    const localFileMD5 = await calculateMD5(localFilePath);
 
-    await s3Client.send(new DeleteObjectsCommand(deleteParams));
-
-    if (listedObjects.IsTruncated) await clearS3DistFolder(bucketName);
+    return headData.ETag === `"${localFileMD5}"`;
   } catch (error) {
-    console.error("Error clearing /dist/ folder in S3:", error);
+    // 如果文件未找到，则返回 false
+    if (error.name === "NotFound") {
+      return false;
+    }
+    throw error;
   }
 };
 
@@ -71,8 +69,16 @@ const uploadFolderToS3 = async (folderPath, bucketName, basePath = "dist") => {
     const fileStat = fs.statSync(filePath);
 
     if (fileStat.isFile()) {
-      const fileStream = fs.createReadStream(filePath);
       const key = path.join(basePath, file).replace(/\\/g, "/"); // 文件在 S3 中的键（路径）
+
+      if (await isFileInS3(bucketName, key, filePath)) {
+        console.log(
+          `File ${key} already exists in ${bucketName} and is identical. Skipping upload.`,
+        );
+        continue;
+      }
+
+      const fileStream = fs.createReadStream(filePath);
       const contentType = mime.getType(filePath) || "application/octet-stream";
 
       const uploadParams = {
@@ -101,7 +107,6 @@ const uploadFolderToS3 = async (folderPath, bucketName, basePath = "dist") => {
 
 // 执行上传操作
 const main = async () => {
-  await clearS3DistFolder(bucketName);
   await uploadFolderToS3(folderPath, bucketName);
 };
 

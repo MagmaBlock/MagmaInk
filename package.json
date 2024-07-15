@@ -64,6 +64,7 @@
     "@types/markdown-it": "^14.1.1",
     "@types/mdast": "^4.0.4",
     "@types/sanitize-html": "^2.11.0",
+    "crypto": "^1.0.1",
     "dotenv": "^16.4.5",
     "mime": "^4.0.4",
     "prettier": "^3.3.3",
