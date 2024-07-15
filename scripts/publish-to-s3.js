@@ -24,10 +24,6 @@ const s3Client = new S3Client({
   endpoint: process.env.S3_ENDPOINT, // 从环境变量获取自定义 endpoint
 });
 
-// 定义要上传的文件夹路径和目标 S3 桶名称
-const folderPath = path.join(__dirname, "../dist"); // 指定 /dist 文件夹
-const bucketName = process.env.S3_BUCKET_NAME; // 从环境变量获取 S3 桶名称
-
 // 计算文件的 MD5 哈希值
 const calculateMD5 = (filePath) => {
   return new Promise((resolve, reject) => {
@@ -50,6 +46,7 @@ const isFileInS3 = async (bucketName, key, localFilePath) => {
     const headData = await s3Client.send(new HeadObjectCommand(headParams));
     const localFileMD5 = await calculateMD5(localFilePath);
 
+    // 检查 ETag 是否等于本地文件的 MD5 值
     return headData.ETag === `"${localFileMD5}"`;
   } catch (error) {
     // 如果文件未找到，则返回 false
@@ -60,9 +57,42 @@ const isFileInS3 = async (bucketName, key, localFilePath) => {
   }
 };
 
-// 递归上传文件夹中的所有文件到 S3
-const uploadFolderToS3 = async (folderPath, bucketName, basePath = "dist") => {
+// 上传单个文件到 S3
+const uploadFileToS3 = async ({ bucketName, key, filePath }) => {
+  if (await isFileInS3(bucketName, key, filePath)) {
+    console.log(
+      `File ${key} already exists in ${bucketName} and is identical. Skipping upload.`,
+    );
+    return;
+  }
+
+  const fileStream = fs.createReadStream(filePath);
+  const contentType = mime.getType(filePath) || "application/octet-stream";
+
+  const uploadParams = {
+    Bucket: bucketName,
+    Key: key,
+    Body: fileStream,
+    ContentType: contentType, // 设置 Content-Type
+  };
+
+  try {
+    const upload = new Upload({
+      client: s3Client,
+      params: uploadParams,
+    });
+
+    await upload.done();
+    console.log(`Successfully uploaded ${key} to ${bucketName}`);
+  } catch (error) {
+    console.error(`Error uploading ${key}:`, error);
+  }
+};
+
+// 递归收集文件夹中的所有文件路径
+const collectFiles = (folderPath, basePath = "dist") => {
   const files = fs.readdirSync(folderPath);
+  let fileList = [];
 
   for (const file of files) {
     const filePath = path.join(folderPath, file);
@@ -70,44 +100,29 @@ const uploadFolderToS3 = async (folderPath, bucketName, basePath = "dist") => {
 
     if (fileStat.isFile()) {
       const key = path.join(basePath, file).replace(/\\/g, "/"); // 文件在 S3 中的键（路径）
-
-      if (await isFileInS3(bucketName, key, filePath)) {
-        console.log(
-          `File ${key} already exists in ${bucketName} and is identical. Skipping upload.`,
-        );
-        continue;
-      }
-
-      const fileStream = fs.createReadStream(filePath);
-      const contentType = mime.getType(filePath) || "application/octet-stream";
-
-      const uploadParams = {
-        Bucket: bucketName,
-        Key: key,
-        Body: fileStream,
-        ContentType: contentType, // 设置 Content-Type
-      };
-
-      try {
-        const upload = new Upload({
-          client: s3Client,
-          params: uploadParams,
-        });
-
-        await upload.done();
-        console.log(`Successfully uploaded ${key} to ${bucketName}`);
-      } catch (error) {
-        console.error(`Error uploading ${key}:`, error);
-      }
+      fileList.push({ key, filePath });
     } else if (fileStat.isDirectory()) {
-      await uploadFolderToS3(filePath, bucketName, path.join(basePath, file));
+      fileList = fileList.concat(
+        collectFiles(filePath, path.join(basePath, file)),
+      );
     }
   }
+
+  return fileList;
 };
 
 // 执行上传操作
 const main = async () => {
-  await uploadFolderToS3(folderPath, bucketName);
+  const folderPath = path.join(__dirname, "../dist"); // 指定 /dist 文件夹
+  const bucketName = process.env.S3_BUCKET_NAME; // 从环境变量获取 S3 桶名称
+  const filesToUpload = collectFiles(folderPath);
+
+  // 并发上传文件
+  await Promise.all(
+    filesToUpload.map((file) =>
+      uploadFileToS3({ bucketName, key: file.key, filePath: file.filePath }),
+    ),
+  );
 };
 
 main().catch(console.error);
