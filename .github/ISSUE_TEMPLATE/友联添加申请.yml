@@ -1,7 +1,5 @@
 name: 友联添加申请
 description: 在本站添加友联的申请
-title: '请输入您的站点名称'
-
 body:
 - type: markdown
   attributes:
