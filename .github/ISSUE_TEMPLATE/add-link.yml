@@ -1,20 +1,24 @@
 name: 友联添加申请
 description: 在本站添加友联的申请
 body:
-- type: markdown
+- type: checkboxes
+  id: agree
   attributes:
-    value: |
-      请确认你已了解 https://magma.ink/links/ 中添加站点的需求。
+    label: 确认
+    description: 请确认您满足可添加友联的需求
+    options:
+      - label: 已了解 https://magma.ink/links/ 中添加站点的需求
+        required: true
 - type: input
   id: site-name
   attributes:
     label: 站点名称
     description: 你的站点名字
     placeholder: Magma Ink
-    value: Magma Ink
   validations:
     required: true
-- type: textarea
+- type: input
+  id: site-desc
   attributes:
     label: 站点简介
     description: 站点的描述（可选）
@@ -25,7 +29,6 @@ body:
     label: 站点地址
     description: 站点的主页链接
     placeholder: https://magma.ink
-    value: https://magma.ink
   validations:
     required: true
 - type: input
@@ -34,11 +37,3 @@ body:
     label: 站点头像
     description: 你的站点头像链接（推荐）
     placeholder: https://q1.qlogo.cn/g?b=qq&nk=823202450&s=640
-- type: checkboxes
-  id: agree
-  attributes:
-    label: 我同意
-    description: 请确认您同意添加友联的所有要求
-    options:
-      - label: 我已阅读并同意以上所有要求
-        required: true
