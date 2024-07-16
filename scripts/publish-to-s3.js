@@ -24,6 +24,12 @@ const s3Client = new S3Client({
   endpoint: process.env.S3_ENDPOINT, // 从环境变量获取自定义 endpoint
 });
 
+// 定义要上传的文件夹路径和目标 S3 桶名称
+const folderPath =
+  process.env.LOCAL_FOLDER_PATH || path.join(__dirname, "../dist"); // 本地文件夹路径，默认值为 /dist
+const bucketName = process.env.S3_BUCKET_NAME; // 从环境变量获取 S3 桶名称
+const destinationPath = process.env.S3_DESTINATION_PATH || ""; // 目标路径常量，默认值为空字符串
+
 // 计算文件的 MD5 哈希值
 const calculateMD5 = (filePath) => {
   return new Promise((resolve, reject) => {
@@ -57,8 +63,13 @@ const isFileInS3 = async (bucketName, key, localFilePath) => {
   }
 };
 
-// 上传单个文件到 S3
-const uploadFileToS3 = async ({ bucketName, key, filePath }) => {
+// 上传单个文件到 S3，并实现失败重传机制
+const uploadFileToS3 = async ({
+  bucketName,
+  key,
+  filePath,
+  maxRetries = 3,
+}) => {
   if (await isFileInS3(bucketName, key, filePath)) {
     console.log(
       `File ${key} already exists in ${bucketName} and is identical. Skipping upload.`,
@@ -76,21 +87,32 @@ const uploadFileToS3 = async ({ bucketName, key, filePath }) => {
     ContentType: contentType, // 设置 Content-Type
   };
 
-  try {
-    const upload = new Upload({
-      client: s3Client,
-      params: uploadParams,
-    });
+  let retries = 0;
+  while (retries < maxRetries) {
+    try {
+      const upload = new Upload({
+        client: s3Client,
+        params: uploadParams,
+      });
 
-    await upload.done();
-    console.log(`Successfully uploaded ${key} to ${bucketName}`);
-  } catch (error) {
-    console.error(`Error uploading ${key}:`, error);
+      await upload.done();
+      console.log(`Successfully uploaded ${key} to ${bucketName}`);
+      return;
+    } catch (error) {
+      retries++;
+      console.error(
+        `Error uploading ${key}, attempt ${retries} of ${maxRetries}:`,
+        error,
+      );
+      if (retries === maxRetries) {
+        console.error(`Failed to upload ${key} after ${maxRetries} attempts`);
+      }
+    }
   }
 };
 
 // 递归收集文件夹中的所有文件路径
-const collectFiles = (folderPath, basePath = "dist") => {
+const collectFiles = (folderPath, basePath = "") => {
   const files = fs.readdirSync(folderPath);
   let fileList = [];
 
@@ -113,14 +135,16 @@ const collectFiles = (folderPath, basePath = "dist") => {
 
 // 执行上传操作
 const main = async () => {
-  const folderPath = path.join(__dirname, "../dist"); // 指定 /dist 文件夹
-  const bucketName = process.env.S3_BUCKET_NAME; // 从环境变量获取 S3 桶名称
   const filesToUpload = collectFiles(folderPath);
 
   // 并发上传文件
   await Promise.all(
     filesToUpload.map((file) =>
-      uploadFileToS3({ bucketName, key: file.key, filePath: file.filePath }),
+      uploadFileToS3({
+        bucketName,
+        key: path.join(destinationPath, file.key),
+        filePath: file.filePath,
+      }),
     ),
   );
 };
