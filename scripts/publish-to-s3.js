@@ -25,10 +25,11 @@ const s3Client = new S3Client({
 });
 
 // 定义要上传的文件夹路径和目标 S3 桶名称
-const folderPath =
-  process.env.LOCAL_FOLDER_PATH || path.join(__dirname, "../dist"); // 本地文件夹路径，默认值为 /dist
-const bucketName = process.env.S3_BUCKET_NAME; // 从环境变量获取 S3 桶名称
-const destinationPath = process.env.S3_DESTINATION_PATH || ""; // 目标路径常量，默认值为空字符串
+const localFolderPath =
+  process.env.LOCAL_FOLDER_PATH || path.join(__dirname, "../dist");
+const folderPath = localFolderPath.replace(/\\/g, "/"); // 替换路径分隔符
+const bucketName = process.env.S3_BUCKET_NAME;
+const destinationPath = process.env.S3_DESTINATION_PATH || "";
 
 // 计算文件的 MD5 哈希值
 const calculateMD5 = (filePath) => {
@@ -82,7 +83,7 @@ const uploadFileToS3 = async ({
 
   const uploadParams = {
     Bucket: bucketName,
-    Key: key,
+    Key: key.replace(/\\/g, "/"), // 替换路径分隔符
     Body: fileStream,
     ContentType: contentType, // 设置 Content-Type
   };
@@ -96,16 +97,20 @@ const uploadFileToS3 = async ({
       });
 
       await upload.done();
-      console.log(`Successfully uploaded ${key} to ${bucketName}`);
+      console.log(
+        `Successfully uploaded ${key.replace(/\\/g, "/")} to ${bucketName}`,
+      );
       return;
     } catch (error) {
       retries++;
       console.error(
-        `Error uploading ${key}, attempt ${retries} of ${maxRetries}:`,
+        `Error uploading ${key.replace(/\\/g, "/")}, attempt ${retries} of ${maxRetries}:`,
         error,
       );
       if (retries === maxRetries) {
-        console.error(`Failed to upload ${key} after ${maxRetries} attempts`);
+        console.error(
+          `Failed to upload ${key.replace(/\\/g, "/")} after ${maxRetries} attempts`,
+        );
       }
     }
   }
@@ -117,7 +122,7 @@ const collectFiles = (folderPath, basePath = "") => {
   let fileList = [];
 
   for (const file of files) {
-    const filePath = path.join(folderPath, file);
+    const filePath = path.join(folderPath, file).replace(/\\/g, "/");
     const fileStat = fs.statSync(filePath);
 
     if (fileStat.isFile()) {
@@ -125,7 +130,7 @@ const collectFiles = (folderPath, basePath = "") => {
       fileList.push({ key, filePath });
     } else if (fileStat.isDirectory()) {
       fileList = fileList.concat(
-        collectFiles(filePath, path.join(basePath, file)),
+        collectFiles(filePath, path.join(basePath, file).replace(/\\/g, "/")),
       );
     }
   }
@@ -142,7 +147,7 @@ const main = async () => {
     filesToUpload.map((file) =>
       uploadFileToS3({
         bucketName,
-        key: path.join(destinationPath, file.key),
+        key: path.join(destinationPath, file.key).replace(/\\/g, "/"),
         filePath: file.filePath,
       }),
     ),
