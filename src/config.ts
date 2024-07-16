@@ -39,6 +39,10 @@ export const navBarConfig: NavBarConfig = {
     },
     LinkPreset.About,
     {
+      name: "联系",
+      url: "/contact/",
+    },
+    {
       name: "开往",
       url: "https://www.travellings.cn/go.html",
       external: true,
@@ -57,25 +61,29 @@ export const profileConfig: ProfileConfig = {
   bio: "为美好的生活献礼",
   links: [
     {
+      name: "GitHub",
+      icon: "fa6-brands:github",
+      url: "https://github.com/MagmaBlock",
+    },
+    {
       name: "Bilibili",
       icon: "fa6-brands:bilibili",
       url: "https://space.bilibili.com/6281315",
     },
     {
-      name: "Acfun",
-      icon: "fa6-solid:a",
-      url: "https://www.acfun.cn/u/14378861",
+      name: "抖音",
+      icon: "fa6-brands:tiktok",
+      url: "https://www.douyin.com/user/MS4wLjABAAAA94Smu-tBGivotmvEz1gZW9TvdhDxd0eIQex67Xma72g",
     },
-    {
-      name: "GitHub",
-      icon: "fa6-brands:github",
-      url: "https://github.com/MagmaBlock",
-    },
-
     {
       name: "Mastodon",
       icon: "fa6-brands:mastodon",
       url: "https://hydrate.space/@magma",
+    },
+    {
+      name: "邮件",
+      icon: "material-symbols:mail",
+      url: "mailto:magmablock@qq.com",
     },
   ],
 };
