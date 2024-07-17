@@ -24,14 +24,14 @@ const links: { title: string; link: string; desc: string; img: string }[] = [
   },
   {
     link: "https://ivampiresp.com",
-    title: "iVampireSPの物語",
-    img: "https://cravatar.cn/avatar/9116fc3de8f9a46668beb1a6b7dbcbcd?s=512&amp;d=mm&amp;r=g",
-    desc: "用初次相遇与你定下这份永恒的誓约。",
+    title: "iVampireSP 的物语",
+    img: "https://nwl.im/avatar",
+    desc: "比起千言万语，更重要的是心灵相通吧。",
   },
   {
     link: "https://moe.tips",
     title: "萌 (//∇//) 贴士",
-    img: "https://img.cdn.18g.me/2022/02/19/d8d559274a2f6.jpg",
+    img: "https://moe.tips/wp-content/uploads/2021/11/33144fad212d1.jpg",
     desc: "介绍愿你把酒执剑，归来仍是少年",
   },
   {
@@ -41,6 +41,7 @@ const links: { title: string; link: string; desc: string; img: string }[] = [
     desc: "Qine的个人小站",
   },
   {
+    // 2024年7月18日 打不开
     link: "https://blog.awsl.love/",
     title: "悲催の记事账簿",
     img: "https://blog.awsl.love/logo2.webp",
@@ -49,39 +50,39 @@ const links: { title: string; link: string; desc: string; img: string }[] = [
   {
     link: "https://www.moec.top",
     title: "老兄de博客",
-    img: "https://www.moec.top/wp-content/uploads/2021/01/photo_2020-04-05_08-52-40.jpg",
+    img: "https://www.moec.top/logo.webp",
     desc: "杂七杂八的分享~",
   },
   {
     link: "https://jixiejidiguan.top/",
-    title: "JIXIEJIDIGUAN",
-    img: "http://q1.qlogo.cn/g?b=qq&amp;nk=3549518275&amp;s=640",
-    desc: "默默无闻",
+    title: "画的个人记录",
+    img: "https://jixiejidiguan.top/favicon.ico",
+    desc: "其实没有你们想的那么复杂！",
   },
   {
     link: "https://blog.iamsjy.com/",
     title: "Tony’s Blog",
-    img: "https://iamsjy.oss-cn-shanghai.aliyuncs.com/icon.jpg",
-    desc: "我见青山多妩媚,料青山见我应如是。",
+    img: "https://blog.iamsjy.com/assets/favicon.jpg",
+    desc: "一个萌新的博客",
   },
-  {
-    link: "https://www.baiduniang.com/",
-    title: "摆渡娘",
-    img: "https://www.baiduniang.com/wp-content/uploads/2021/08/v2-7d019ee242e42d9acee0bc709277728b_xll.jpg",
-    desc: "摆渡博客",
-  },
+  // {
+  //   link: "https://www.baiduniang.com/",
+  //   title: "摆渡娘",
+  //   img: "https://www.baiduniang.com/wp-content/uploads/2021/08/v2-7d019ee242e42d9acee0bc709277728b_xll.jpg",
+  //   desc: "摆渡博客",
+  // },
   {
     link: "https://www.bcmonomial.xyz/",
     title: "单项式的笔记本",
     img: "https://q1.qlogo.cn/g?b=qq&nk=3176459211&s=640",
     desc: "你想在这里看到什么呢？",
   },
-  {
-    link: "https://dioxide-cn.ink",
-    title: "Dioxide.CNの时间轴",
-    img: "https://s1.ax1x.com/2022/04/21/LyjYZ9.jpg",
-    desc: "茶边话旧，看几许星迢露冕，从淮海南来。",
-  },
+  // {
+  //   link: "https://dioxide-cn.ink",
+  //   title: "Dioxide.CNの时间轴",
+  //   img: "https://s1.ax1x.com/2022/04/21/LyjYZ9.jpg",
+  //   desc: "茶边话旧，看几许星迢露冕，从淮海南来。",
+  // },
   {
     link: "https://imfurry.com",
     title: "中二病晚期の物語",
@@ -112,18 +113,18 @@ const links: { title: string; link: string; desc: string; img: string }[] = [
     img: "https://irr.ink/logo.jpg",
     desc: "Like tears in rain.",
   },
-  {
-    link: "https://www.yhdzz.cn/",
-    title: "小满の窝",
-    img: "https://doge.cdn.yhdzz.cn/xiaoman1221s-blog-bead.jpg",
-    desc: "天上如是，地下亦然",
-  },
-  {
-    link: "https://www.casecori.top/",
-    title: "CasecoRI",
-    img: "https://cdn.casecori.top/gh/cystee/om/favicon.png",
-    desc: "高智熵博主",
-  },
+  // {
+  //   link: "https://www.yhdzz.cn/",
+  //   title: "小满の窝",
+  //   img: "https://doge.cdn.yhdzz.cn/xiaoman1221s-blog-bead.jpg",
+  //   desc: "天上如是，地下亦然",
+  // },
+  // {
+  //   link: "https://www.casecori.top/",
+  //   title: "CasecoRI",
+  //   img: "https://cdn.casecori.top/gh/cystee/om/favicon.png",
+  //   desc: "高智熵博主",
+  // },
   {
     link: "https://www.limingliang.top",
     title: "Eucalyptus",
@@ -136,11 +137,23 @@ const links: { title: string; link: string; desc: string; img: string }[] = [
     img: "https://cdn.arthals.ink/Arthals.png",
     desc: "写代码的医学牲",
   },
+  // {
+  //   link: "https://wuminboke.site/",
+  //   title: "无名博客",
+  //   img: "https://wuminboke.site/avatar.jpg",
+  //   desc: "一个无聊的人罢了~",
+  // },
   {
-    link: "https://wuminboke.site/",
-    title: "无名博客",
-    img: "https://wuminboke.site/avatar.jpg",
-    desc: "一个无聊的人罢了~",
+    link: "https://henrywhu.cn/",
+    title: "Henry Moreau",
+    img: "https://bu.dusays.com/2024/06/28/667e684e0adbe.png",
+    desc: "Student / Designer / Dreamchaser",
+  },
+  {
+    link: "https://zkpeace.com/",
+    title: "Zkpeace",
+    desc: "nothing to say.",
+    img: "https://raw.githubusercontent.com/Uzizkp/jscdn/main/blog/img/beauty_1647190656575.jpg",
   },
 ];
 
