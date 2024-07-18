@@ -114,12 +114,6 @@ const links: { title: string; link: string; desc: string; img: string }[] = [
     desc: "Like tears in rain.",
   },
   // {
-  //   link: "https://www.yhdzz.cn/",
-  //   title: "小满の窝",
-  //   img: "https://doge.cdn.yhdzz.cn/xiaoman1221s-blog-bead.jpg",
-  //   desc: "天上如是，地下亦然",
-  // },
-  // {
   //   link: "https://www.casecori.top/",
   //   title: "CasecoRI",
   //   img: "https://cdn.casecori.top/gh/cystee/om/favicon.png",
