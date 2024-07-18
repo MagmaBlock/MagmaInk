@@ -1,7 +1,7 @@
 ---
 title: "(怪东西) Magma 智能台灯设计稿"
 published: 2020-10-13
-category: "经验"
+category: "其他"
 tags:
   - "安卓"
   - "开发"

@@ -1,7 +1,7 @@
 ---
 title: "Minecraft 基岩版"
 published: 2020-08-29
-category: "分享"
+category: "软件"
 image: "images/QQ截图20200830155107.png"
 tags: []
 ---

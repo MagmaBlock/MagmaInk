@@ -1,7 +1,7 @@
 ---
 title: "好东西"
 published: 2021-01-27
-category: "hide"
+category: "其他"
 tags: []
 ---
 

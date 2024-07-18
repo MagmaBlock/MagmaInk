@@ -7,7 +7,7 @@ tags:
   - Rclone
   - 存储
   - 踩坑
-category: "DEBUG"
+category: "开发"
 draft: false
 ---
 

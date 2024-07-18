@@ -1,7 +1,7 @@
 ---
 title: "电脑糕的存钱罐"
 published: 2020-10-19
-category: "hide"
+category: "其他"
 tags:
   - "记录"
 ---

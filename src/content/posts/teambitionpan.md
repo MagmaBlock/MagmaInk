@@ -1,7 +1,7 @@
 ---
 title: "2TB超大网盘不限速无广告，阿里云Teambition网盘用起来怎么样？"
 published: 2020-12-08
-category: "分享"
+category: "软件"
 tags:
   - "teambition"
   - "存储"

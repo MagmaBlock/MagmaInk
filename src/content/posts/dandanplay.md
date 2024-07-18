@@ -1,7 +1,7 @@
 ---
 title: "也许是20年代免费追番的最好选择 离线看番还能配弹幕"
 published: 2021-01-10
-category: "经验"
+category: "软件"
 tags:
   - "分享"
   - "弹弹play"

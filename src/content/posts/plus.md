@@ -1,7 +1,7 @@
 ---
 title: "Zth Plus (已过期)"
 published: 2020-08-29
-category: "分享"
+category: "软件"
 tags:
   - "minecraft"
   - "技术"

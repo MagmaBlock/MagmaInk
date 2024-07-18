@@ -1,7 +1,7 @@
 ---
 title: "由于 MySQL 外键约束所关联两表字符集不同导致 HuskHomes 升级失败"
 published: 2023-08-13
-category: "DEBUG"
+category: "开发"
 tags:
   - "minecraft"
   - "mysql"

@@ -1,7 +1,7 @@
 ---
 title: "笔记：外部调用 Cloudreve 的 API 对网盘进行 操作..."
 published: 2021-05-09
-category: "经验"
+category: "开发"
 tags:
   - "cloudreve"
   - "http"

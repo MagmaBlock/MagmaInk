@@ -1,7 +1,7 @@
 ---
 title: "自动开关深色模式 夜间使用电脑不再刺眼 | Windows 10 Auto Dark Mode"
 published: 2020-09-19
-category: "分享"
+category: "软件"
 tags:
   - "windows"
   - "小工具"

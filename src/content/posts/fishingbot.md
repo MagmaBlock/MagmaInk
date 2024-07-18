@@ -1,7 +1,7 @@
 ---
-title: "再也不开着客户端钓鱼，从此挂机不是难事！FishingBot使用教程"
+title: "再也不开着客户端钓鱼，从此挂机不是难事！FishingBot 使用教程"
 published: 2021-03-09
-category: "分享"
+category: "软件"
 tags:
   - "fishingbot"
   - "minecraft"

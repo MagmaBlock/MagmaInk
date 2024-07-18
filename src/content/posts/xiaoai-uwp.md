@@ -1,7 +1,7 @@
 ---
 title: "Windows 10 的全功能小爱同学（UWP）"
 published: 2021-03-31
-category: "分享"
+category: "软件"
 tags:
   - "uwp"
   - "小爱同学"

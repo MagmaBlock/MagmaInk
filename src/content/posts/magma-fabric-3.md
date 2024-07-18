@@ -1,7 +1,7 @@
 ---
 title: "Magma 简单整合 3.0"
 published: 2021-05-02
-category: "分享"
+category: "软件"
 tags:
   - "fabric"
   - "minecraft"

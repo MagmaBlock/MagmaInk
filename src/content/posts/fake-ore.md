@@ -1,7 +1,7 @@
 ---
 title: "一种省流量占用低的假矿实现方式？"
 published: 2022-07-27
-category: "分享"
+category: "经验"
 tags:
   - "minecraft"
   - "反作弊"

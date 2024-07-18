@@ -1,7 +1,7 @@
 ---
 title: "Essentials Warp 导出小记"
 published: 2022-02-02
-category: "分享"
+category: "开发"
 tags:
   - "minecraft"
   - "spigot"

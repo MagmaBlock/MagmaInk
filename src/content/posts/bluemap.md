@@ -1,9 +1,9 @@
 ---
-title: "用全新的视角打开Minecraft 在线地图——BlueMap"
+title: "用全新的视角打开 Minecraft 在线地图 —— BlueMap"
 published: 2021-08-05
-category: "分享"
+category: "软件"
 tags:
-  - "minecraft"
+  - "Minecraft"
   - "教程"
   - "软件"
 image: "images/1628141639-2021-08-05_13.30.02-1.jpg"

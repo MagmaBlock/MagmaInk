@@ -1,7 +1,7 @@
 ---
 title: "网站上云的时代：我在用哪几朵云？个人云服务使用心得-①"
 published: 2021-06-02
-category: "分享"
+category: "经验"
 tags:
   - "cdn"
   - "云服务"

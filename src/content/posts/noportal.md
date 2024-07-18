@@ -1,7 +1,7 @@
 ---
 title: "解决Zth服务器老有人黏地狱门里的问题"
 published: 2021-03-29
-category: "游戏开发"
+category: "软件"
 image: "images/1617044060-athul-cyriac-ajay-ndokCrfQWrI-unsplash_compress99.jpg"
 tags: []
 ---

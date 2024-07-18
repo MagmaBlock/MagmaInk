@@ -1,7 +1,7 @@
 ---
 title: "Magma Fabric 简单整合"
 published: 2021-02-03
-category: "分享"
+category: "软件"
 image: "images/snow1.gif"
 tags: []
 ---

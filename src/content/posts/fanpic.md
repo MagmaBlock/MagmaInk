@@ -1,7 +1,7 @@
 ---
 title: "追番日记 封面头图历史"
 published: 2020-11-19
-category: "hide"
+category: "ACGN"
 tags: []
 ---
 

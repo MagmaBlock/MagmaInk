@@ -1,7 +1,7 @@
 ---
 title: "Java / OpenJDK 国内镜像站指路 & 发行版简介"
 published: 2021-12-02
-category: "分享"
+category: "软件"
 image: "images/1622804528-jonas-jacobsson-RFHFV7lVQBY-unsplash.jpg"
 tags:
   - 资源

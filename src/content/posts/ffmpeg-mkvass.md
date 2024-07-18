@@ -1,7 +1,7 @@
 ---
 title: "使用 FFmpeg 将 MKV 内封字幕压制为内嵌硬字幕"
 published: 2022-05-03
-category: "分享"
+category: "开发"
 tags:
   - "ffmpeg"
   - "字幕"
