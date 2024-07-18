@@ -155,6 +155,12 @@ const links: { title: string; link: string; desc: string; img: string }[] = [
     desc: "nothing to say.",
     img: "https://raw.githubusercontent.com/Uzizkp/jscdn/main/blog/img/beauty_1647190656575.jpg",
   },
+  {
+    title: "满久琦的个人网站",
+    desc: "天上如是，地下亦然",
+    link: "https://www.manjiuqi.com",
+    img: "https://static.yhdzz.cn/logos/512x512.png",
+  },
 ];
 
 const randomLinks = computed(() => links.sort(() => Math.random() - 0.5));
