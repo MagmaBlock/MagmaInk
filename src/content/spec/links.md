@@ -8,6 +8,8 @@ category: ""
 draft: false
 ---
 
+[中文博客列表导航](https://zhblogs.ohyee.cc/)
+
 ## 友联添加和维持要求
 
 本站欢迎相似的个人向网站添加友联，目前有以下几个要求：
