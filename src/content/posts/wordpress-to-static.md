@@ -50,7 +50,7 @@ _本站的新版本_
 选用 Astro 还有一些优点，因为它更易于二开，其支持 React、Vue、Svelte 等主流前端框架同时使用，原理是被他们称作 [Astro 群岛](https://docs.astro.build/zh-cn/concepts/islands/)的技术。比如作为一个 Vue 开发者，我可以使用 Vue 来编写一些自定义的组件，我使用的主题也使用了 TailwindCSS 原子化样式组件库。如果我有其他的框架想使用，只需要安装新的包，并且编写简短的代码即可。
 
 ![magmaink-new-friend-links](images/magmaink-new-friend-links.png)
-_自行编写的友联组件_
+_自行编写的友链组件_
 
 ## 静态站点的缺点
 

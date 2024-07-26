@@ -155,6 +155,12 @@ const links: { title: string; link: string; desc: string; img: string }[] = [
     link: "https://www.manjiuqi.com",
     img: "https://static.yhdzz.cn/logos/512x512.png",
   },
+  {
+    title: "Pinpe 的云端",
+    desc: "一个属于自己的云朵。",
+    link: "https://pinpe.top/",
+    img: "https://pinpe.top/head.jpg",
+  },
 ];
 
 const randomLinks = computed(() => links.sort(() => Math.random() - 0.5));
