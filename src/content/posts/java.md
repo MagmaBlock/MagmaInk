@@ -7,26 +7,47 @@ tags:
   - 资源
 ---
 
-为了方便自己和他人快速获取 Java / OpenJDK，我在本界面提供了一些可靠的链接和信息。
+为了方便自己和他人快速获取 Java 运行环境，我在本界面提供了一些可靠的链接和信息。
 
-## 常用链接指路
+## 常用链接导航
 
-### 适用于大多数人的情况：Windows 系统，仅玩 Minecraft 使用
+请根据你的需求在下面查找需要的环境和下载链接。
 
-这里提供了最通用的 AdoptiumOpenJDK 17 和 8 的国内镜像下载链接，请根据需求下载。  
-**MC 1.18 版本及以上**需要 **Java 17** 运行环境，**MC 1.8 至 1.16.5 版本**推荐 **Java 8** 运行环境。
+### 仅仅是玩 Minecraft 使用
 
-[**AdoptiumOpenJDK 17 - 适用于 1.18+**](https://mirrors.tuna.tsinghua.edu.cn/Adoptium/17/jre/x64/windows/)
+#### 我是 Windows 系统
 
-[**AdoptiumOpenJDK 8 - 推荐用于 1.16.5 及早期版本**](https://mirrors.tuna.tsinghua.edu.cn/Adoptium/8/jre/x64/windows/)
+- **Minecraft 1.20.5 及以上版本**：使用 Java 21
+  - [AdoptiumOpenJDK 21 清华源](https://mirrors.tuna.tsinghua.edu.cn/Adoptium/21/jre/x64/windows/)
+- **Minecraft 1.18 - 1.20.4**：使用 Java 17
+  - [AdoptiumOpenJDK 17 清华源](https://mirrors.tuna.tsinghua.edu.cn/Adoptium/17/jre/x64/windows/)
+- **Minecraft 1.16.5 及以下**：使用 Java 8
+  - [AdoptiumOpenJDK 8 清华源](https://mirrors.tuna.tsinghua.edu.cn/Adoptium/8/jre/x64/windows/)
+
+#### 我是 macOS 系统
+
+- **Minecraft 1.20.5 及以上版本**：使用 Java 21
+  - [AdoptiumOpenJDK 21 清华源](https://mirrors.tuna.tsinghua.edu.cn/Adoptium/21/jre/x64/mac/)
+- **Minecraft 1.18 - 1.20.4**：使用 Java 17
+  - [AdoptiumOpenJDK 17 清华源](https://mirrors.tuna.tsinghua.edu.cn/Adoptium/17/jre/x64/mac/)
+- **Minecraft 1.16.5 及以下**：使用 Java 8
+  - [AdoptiumOpenJDK 8 清华源](https://mirrors.tuna.tsinghua.edu.cn/Adoptium/8/jre/x64/mac/)
 
 ---
 
-### 更多操作系统或 CPU 架构的 JRE 运行环境快速下载
+## 其他有关 Java 运行环境的大陆镜像站
 
-[清华大学镜像 OpenJDK – 17](https://mirrors.tuna.tsinghua.edu.cn/Adoptium/17/jre/)
+下面是一些不错的 OpenJDK (含) 中国大陆地区的镜像站。包含较为流行的 OpenJDK 发行版如 Adopt。
 
-[清华大学镜像 – OpenJDK 8](https://mirrors.tuna.tsinghua.edu.cn/Adoptium/8/jre/)
+注：下列镜像站部分只收录 JDK，通常适合开发者使用。JDK 不但可以运行 Java 程序（如 Minecraft），还可以用于开发。
+
+- [清华大学开源软件镜像站 - Adoptium 21](https://mirrors.tuna.tsinghua.edu.cn/Adoptium/21/)
+- [清华大学开源软件镜像站 - Adoptium 17](https://mirrors.tuna.tsinghua.edu.cn/Adoptium/17/jre/)
+- [清华大学开源软件镜像站 - Adoptium 8](https://mirrors.tuna.tsinghua.edu.cn/Adoptium/8/jre/)
+- [injdk.cn 镜像站](https://www.injdk.cn/)
+- [华为云开源镜像站 - OpenJDK](https://mirrors.huaweicloud.com/openjdk/)
+- [编程宝库 OpenJDK 镜像下载（过时）](http://www.codebaoku.com/jdk/jdk-openjdk.html)
+- [编程宝库 Oracle JDK 镜像下载（过时）](http://www.codebaoku.com/jdk/jdk-oracle.html)
 
 ---
 
@@ -36,30 +57,13 @@ tags:
 
 实际上若您游玩纯原版，Minecraft 1.6.4 及以后的版本完全可以用 Java 17 运行。因此，Minecraft 1.17 同样兼容 Java 17。但若遇到了故障可以尝试[点此下载 Java 16](https://mirrors.huaweicloud.com/openjdk/16.0.2/openjdk-16.0.2_windows-x64_bin.zip)，不过还是建议更新游戏和 Java，因为 MC 1.17 和 Java 16 都是将过时的半成品；  
 若您的客户端不是原版，建议使用此版本 Minecraft 发布时推荐的 Java 版本，或模组作者要求的 Java 版本。更多 ☕Java 可向下翻阅；  
-若您正在使用官方启动器或是网易我的世界中国版，您不需要手动配置 Java，可以离开了；  
-若您正在使用 MacOS 或需要其他版本，请点此查找[清华大学开源软件镜像站的所有 Adoptium 镜像](https://mirrors.tuna.tsinghua.edu.cn/Adoptium/)或向下翻阅。
+若您正在使用官方启动器或是网易我的世界中国版，您不需要手动配置 Java，可以离开了；
 
 ---
 
 ## 什么是 OpenJDK
 
 Java 是一种计算机编程语言，而 OpenJDK 是 Java 的开发环境的开源版本，完全自由，开放源码。Oracle JDK 则是 OpenJDK 的一个发行版，有部分高级功能不完全开源，属于商业性质，在生产环境中使用 Oracle JDK 要注意法律风险。不过几乎所有情况下 OpenJDK 即可满足开发者的所有需求。
-
-## OpenJDK JDK 大陆镜像站
-
-下面是一些不错的 OpenJDK (含)中国大陆地区的镜像站。包含较为流行的 OpenJDK 发行版如 Adopt。
-
-注：下列镜像站部分只收录 JDK，通常适合开发者使用。JDK 不但可以运行 Java 程序（如 Minecraft），还可以用于开发。
-
-[清华大学开源软件镜像站 - AdoptiumOpenJDK](https://mirrors.tuna.tsinghua.edu.cn/Adoptium/)
-
-[前往华为云开源镜像站 - OpenJDK](https://mirrors.huaweicloud.com/openjdk/)
-
-[injdk.cn 镜像站](https://www.injdk.cn/)
-
-[编程宝库 OpenJDK 镜像下载](http://www.codebaoku.com/jdk/jdk-openjdk.html)
-
-[编程宝库 Oracle JDK 镜像下载](http://www.codebaoku.com/jdk/jdk-oracle.html)
 
 ## 更多 OpenJDK 发行版简介
 
@@ -78,14 +82,11 @@ Alibaba Dragonwell 作为 Java 应用的基石，支撑了阿里经济体内所�
 
 [Alibaba Dragonwell 官网](https://dragonwell-jdk.io/)
 
-### 华为 —— 毕昇 JDK
+### 微软的 OpenJDK 构建 —— Microsoft Build of OpenJDK
 
-华为毕昇 JDK 是华为内部基于 OpenJDK 定制的 Huawei JDK 的开源版本，它是一个高性能，可用于生产环境的 OpenJDK 发行版。  
-Huawei JDK 运行在华为内部 500 多个产品上，积累了大量的使用场景，并通过收集 Java 开发者反馈的问题和诉求，解决了业务实际运行中遇到的很多问题，在 ARM 架构上进行了性能优化，毕昇 JDK 运行在大数据场景下可以获得更好的性能。
+Microsoft Build of OpenJDK：微软的 OpenJDK 构建，看起来感觉更像是给微软自家使用的感觉。据评论区一位老哥说还不错。
 
-> 华为的这款 JDK 针对 ARM 指令集 CPU 的平台做了优化，由于手里没有 ARM 的桌面或服务器设备，所以说没法体验。听网友说这个 JDK 拿来在 ARM 电脑上玩 Minecraft 或者开服务器都不错。
-
-[华为毕昇 JDK 官网](https://mirrors.huaweicloud.com/kunpeng/archive/compiler/bisheng_jdk/)
+[微软 Microsoft Build of OpenJDK](https://docs.microsoft.com/zh-cn/java/openjdk/download)
 
 ### Adoptium（原 AdoptOpenJDK）
 
@@ -108,6 +109,27 @@ BellSoft 为几乎所有操作系统和架构提供了名为 Liberica JDK 的开
 
 [BellSoft Liberica JDK](https://bell-sw.com/pages/downloads/?)
 
+### 华为 —— 毕昇 JDK
+
+华为毕昇 JDK 是华为内部基于 OpenJDK 定制的 Huawei JDK 的开源版本，它是一个高性能，可用于生产环境的 OpenJDK 发行版。  
+Huawei JDK 运行在华为内部 500 多个产品上，积累了大量的使用场景，并通过收集 Java 开发者反馈的问题和诉求，解决了业务实际运行中遇到的很多问题，在 ARM 架构上进行了性能优化，毕昇 JDK 运行在大数据场景下可以获得更好的性能。
+
+> 华为的这款 JDK 针对 ARM 指令集 CPU 的平台做了优化，由于手里没有 ARM 的桌面或服务器设备，所以说没法体验。听网友说这个 JDK 拿来在 ARM 电脑上玩 Minecraft 或者开服务器都不错。
+
+[华为毕昇 JDK 官网](https://mirrors.huaweicloud.com/kunpeng/archive/compiler/bisheng_jdk/)
+
+### Oracle OpenJDK
+
+Oracle OpenJDK：不再赘述，是 Oracle 的商业发行版，现在一般不在 Minecraft 服务器的生产环境使用。
+
+[Oracle 官网](https://www.oracle.com/java/technologies/downloads/)
+
+### 亚马逊 AWS —— Amazon Corretto JDK
+
+Amazon Corretto 是开放 Java 开发工具包 (OpenJDK) 的免费、多平台、生产就绪型发行版。Corretto 提供长期支持，其中包括性能增强和安全修复。亚马逊在内部的数千种生产服务上运行 Corretto，并且 Corretto 已被证明能够兼容 Java SE 标准。借助 Corretto，您可以在常用操作系统（包括 Linux、Windows 和 macOS）上开发和运行 Java 应用程序。
+
+[Amazon Corretto JDK 官网](https://aws.amazon.com/cn/corretto/)
+
 ### 腾讯 —— Kona JDK
 
 腾讯 Kona JDK 是腾讯内部基于 OpenJDK 定制的 JDK 发行版本。主要应用于腾讯云业务场景及其他 Java 应用场景，并且针对超大规模的大数据、机器学习和云计算进行了深度优化。  
@@ -117,20 +139,6 @@ Tencent Kona 是腾讯开源的、免费的、基于 OpenJDK 的发行版本，�
 
 [Kona JDK 官网](https://github.com/Tencent/TencentKona-8)
 
-### 亚马逊 AWS —— Amazon Corretto JDK
+---
 
-Amazon Corretto 是开放 Java 开发工具包 (OpenJDK) 的免费、多平台、生产就绪型发行版。Corretto 提供长期支持，其中包括性能增强和安全修复。亚马逊在内部的数千种生产服务上运行 Corretto，并且 Corretto 已被证明能够兼容 Java SE 标准。借助 Corretto，您可以在常用操作系统（包括 Linux、Windows 和 macOS）上开发和运行 Java 应用程序。
-
-[Amazon Corretto JDK 官网](https://aws.amazon.com/cn/corretto/)
-
-### 其他
-
-Microsoft Build of OpenJDK：微软的 OpenJDK 构建，看起来感觉更像是给微软自家使用的感觉。据评论区一位老哥说还不错。
-
-Oracle OpenJDK：不再赘述，是 Oracle 的商业发行版，现在一般不在 Minecraft 服务器的生产环境使用。
-
-[微软 Microsoft Build of OpenJDK](https://docs.microsoft.com/zh-cn/java/openjdk/download)
-
-[Oracle 官网](https://www.oracle.com/java/technologies/downloads/)
-
-本文最初发布于 2020 年 8 月 16 日 上午 4:00，每次进行较大改动时会重置文章发布时间。
+本文最初发布于 2020 年 8 月 16 日 上午 4:00
