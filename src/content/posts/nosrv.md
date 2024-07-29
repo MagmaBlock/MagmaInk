@@ -9,6 +9,7 @@ tags:
   - "技术"
   - "服务器"
 image: "images/christopher-burns-Kj2SaNHG-hg-unsplash-scaled-1.jpg"
+draft: true
 ---
 
 为了美观和方便，许多的 Minecraft 服主都会把自己服务器的 IP 地址加上一层 SRV 解析，这样服务器的端口就能被隐藏，也可以让自己服务器看上去更加整洁。

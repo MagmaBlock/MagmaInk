@@ -10,6 +10,7 @@ tags:
   - "智能"
   - "树莓派"
 image: "images/joel-henry-pdIwPL3HU2s-unsplash.jpg"
+draft: true
 ---
 
 > 想起来树莓派（一种 arm 的开发板）可以装安卓
