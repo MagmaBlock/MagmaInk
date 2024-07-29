@@ -16,7 +16,7 @@ export const siteConfig: SiteConfig = {
   },
   banner: {
     enable: true,
-    src: "/assets/background/hyory-liu-n4018exJ9kw-unsplash.jpg", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+    src: "assets/images/banner/hyory-liu-n4018exJ9kw-unsplash.jpg", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
     position: "top", // Equivalent to object-position, defaults center
   },
   favicon: [
