@@ -105,7 +105,7 @@ const links: { title: string; link: string; desc: string; img: string }[] = [
     link: "https://www.frostfox.cn",
     title: "霜狐的科技屋",
     img: "https://www.frostfox.cn/logo.png",
-    desc: "让科技服务与人类！",
+    desc: "开源创新，自由共享！",
   },
   {
     link: "https://irr.ink/",
