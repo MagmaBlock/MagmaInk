@@ -17,7 +17,7 @@ tags:
 
 ## 简介
 
-（[吹响吧！上低音号 专题](https://magma.ink/%e5%90%b9%e5%93%8d%e5%90%a7%ef%bc%81%e4%b8%8a%e4%bd%8e%e9%9f%b3%e5%8f%b7-%e7%b3%bb%e5%88%97/) | [萌娘百科](https://zh.moegirl.org.cn/%E5%90%B9%E5%93%8D!%E4%B8%8A%E4%BD%8E%E9%9F%B3%E5%8F%B7) | [B 站免费](https://www.bilibili.com/bangumi/play/ep28919)）
+[萌娘百科](https://zh.moegirl.org.cn/%E5%90%B9%E5%93%8D!%E4%B8%8A%E4%BD%8E%E9%9F%B3%E5%8F%B7) | [B 站免费](https://www.bilibili.com/bangumi/play/ep28919)）
 
 > 《**吹响！上低音号**》（日语：**響け！ユーフォニアム**）是由武田绫乃创作的一部小说，并有漫画、动画等衍生作品。 亦有如《吹响！悠风号》或《吹响！次中音号》等不同的译名。
 >
