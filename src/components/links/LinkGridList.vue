@@ -161,6 +161,12 @@ const links: { title: string; link: string; desc: string; img: string }[] = [
     link: "https://pinpe.top/",
     img: "https://pinpe.top/head.jpg",
   },
+  {
+    title: "Lynn的小站",
+    desc: "林中抚琴曲委婉，群山听懂我悲欢",
+    link: "https://blog.lynn6.cn/",
+    img: "https://blog-dogecdn.lynn6.cn/pic/fb2c42d74892b1e208c0be7af2be20b31627004540489.jpeg",
+  },
 ];
 
 const randomLinks = computed(() => links.sort(() => Math.random() - 0.5));
