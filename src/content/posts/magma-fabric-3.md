@@ -20,6 +20,10 @@ image: "images/1619937775-0.jpg"
 
 更惊喜的是，全屏时也能看到中文输入法候选了，就像这样。
 
+<video muted autoplay loop>
+  <source src="/videos/magma-fabric-3-srf.mp4" type="video/mp4" />
+</video>
+
 **兼容性提示：**  
 此模组所依赖的 API 库 Satin 与 Optifine 的光影不兼容，如果你经常使用光影，那么只能关闭它了。  
 兼容性不佳，若要禁用此模组，请禁用【Fabric Language Kotlin（前置）】、【Satin API（前置、与光影冲突）】以及【IngameIME（模组本体）】。本模组已于 3.1 版本移除，但 3.2 版本计划添加输入法自动禁用功能。
