@@ -171,7 +171,7 @@ const links: { title: string; link: string; desc: string; img: string }[] = [
     title: "Peter",
     desc: "无限进步",
     link: "https://peter267.zeabur.app/",
-    img: "https://blog-dogecdn.lynn6.cn/pic/fb2c42d74892b1e208c0be7af2be20b31627004540489.jpeg",
+    img: "https://wmimg.com/i/1169/2024/09/66e8b5d8e0843.jpg",
   },
 ];
 
